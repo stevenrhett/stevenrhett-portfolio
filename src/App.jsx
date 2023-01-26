@@ -1,13 +1,7 @@
-import { useState } from "react";
-import "./App.css";
 import "./index.css";
-import Navigation from "./navigation.jsx";
-import Body from "./body.jsx";
-import Footer from "./footer.jsx";
-import Dashboard from "./dashboard.jsx";
-function App() {
-  const [count, setCount] = useState(0);
-
+import Footer from "./footer.tsx";
+import Dashboard from "./Dashboard.tsx";
+export default function App() {
   return (
     <div className="App">
       <Dashboard />
@@ -15,5 +9,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
