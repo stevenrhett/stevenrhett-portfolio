@@ -39,13 +39,13 @@ export default function Body() {
           </p>
           <div className="mt-10 flex items-center gap-x-6">
             <a
-              href="#"
+              href="src#"
               className="rounded-md bg-purple-500 px-3.5 py-1.5 text-base font-semibold leading-7 text-white shadow-sm hover:bg-purple-400 focus:outline-none focus:ring-2 focus:ring-offset-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-400"
             >
               Recent Projects
             </a>
             <a
-              href="#"
+              href="src#"
               className="text-base font-semibold leading-7 text-purple-900"
             >
               Learn more <span aria-hidden="true">→</span>

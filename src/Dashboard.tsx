@@ -191,7 +191,7 @@ export default function Dashboard() {
                 <div className="flex flex-1">
                   <form
                     className="flex w-full bg-purple-200 md:ml-0"
-                    action="#"
+                    action="src#"
                     method="GET"
                   >
                     <label htmlFor="search-field" className="sr-only">
