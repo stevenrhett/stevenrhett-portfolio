@@ -1,11 +1,11 @@
-// @ts-ignore
+//
 import React from "react";
-// @ts-ignore
+//
 import coderthinking from "./assets/coderthinking.svg";
 import "./App.css";
-// @ts-ignore
+//
 
-// @ts-ignore
+//
 export default function Body() {
   return (
     <div className="relative bg-white">

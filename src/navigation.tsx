@@ -1,6 +1,6 @@
-// @ts-ignore
+//
 import React from "react";
-// @ts-ignore
+//
 import srLogo from "./assets/srLogo.svg";
 
 const Navigation = () => {
