@@ -5,11 +5,11 @@ import signIn from "./assets/signIn.svg";
 export default function SignIn() {
   return (
     <>
-      <div className="flex  bg-gray-50 min-h-full">
-        <div className="flex flex-1 flex-col  justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
-          <div className="mx-auto w-full sm:static sm:mt-32  max-w-md lg:w-96">
+      <div className="flex bg-gray-50 min-h-full">
+        <div className="flex mx-auto sm:scroll-py-14 md:py-12 py-16 object-contain px-4 sm:px-6 lg:flex-none lg:px-48 xl:px-24">
+          <div className="mx-auto sm:static sm:mt-32  max-w-md ">
             <div>
-              <h2 className="sm:mt-60 mt-12 text-3xl text-center font-bold tracking-tight text-blue-900">
+              <h2 className="sm:mt-52 mt-0 text-3xl text-center font-bold tracking-tight text-blue-900">
                 Sign in to register
               </h2>
               <p className="mt-2 text-md text-blue-900">
@@ -20,7 +20,7 @@ export default function SignIn() {
               </p>
             </div>
 
-            <div className="mt-8">
+            <div className="mt-6">
               <div>
                 <div>
                   <div className="mt-1 grid grid-cols-3 gap-3">
@@ -85,14 +85,14 @@ export default function SignIn() {
                   </div>
                 </div>
 
-                <div className="relative mt-6">
+                <div className="relative mt-4">
                   <div
                     className="absolute inset-0 flex items-center"
                     aria-hidden="true"
                   >
                     <div className="w-full border-t border-blue-900" />
                   </div>
-                  <div className="relative flex justify-center text-md">
+                  <div className="sm:hidden relative flex justify-center text-md">
                     <span className="bg-white px-2 text-blue-900">
                       Or continue with
                     </span>
@@ -100,31 +100,31 @@ export default function SignIn() {
                 </div>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-4">
                 <form action="#" method="POST" className="space-y-6">
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-md font-medium text-blue-900"
+                      className="sm:hidden block text-md font-medium text-blue-900"
                     >
                       Email address
                     </label>
-                    <div className="mt-1">
+                    <div className="mt-2">
                       <input
                         id="email"
                         name="email"
                         type="email"
                         autoComplete="email"
                         required
-                        className="block w-full appearance-none rounded-md border border-blue-900 px-3 py-2 placeholder-blue-400 shadow-sm focus:border-blue-700 focus:outline-none focus:ring-blue-700 sm:text-md"
+                        className="sm:hidden block w-full appearance-none rounded-md border border-blue-900 px-3 py-2 placeholder-blue-400 shadow-sm focus:border-blue-700 focus:outline-none focus:ring-blue-700 sm:text-md"
                       />
                     </div>
                   </div>
 
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <label
                       htmlFor="password"
-                      className="block text-md font-medium text-blue-900"
+                      className="sm:hidden block text-md font-medium text-blue-900"
                     >
                       Password
                     </label>
@@ -135,22 +135,22 @@ export default function SignIn() {
                         type="password"
                         autoComplete="current-password"
                         required
-                        className="block w-full appearance-none rounded-md border border-blue-900 px-3 py-2 placeholder-blue-400 shadow-sm focus:border-blue-700 focus:outline-none focus:ring-blue-700 sm:text-md"
+                        className="sm:hidden block w-full appearance-none rounded-md border border-blue-900 px-3 py-2 placeholder-blue-400 shadow-sm focus:border-blue-700 focus:outline-none focus:ring-blue-700 sm:text-md"
                       />
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-8">
                     <div className="flex items-center">
                       <input
                         id="remember-me"
                         name="remember-me"
                         type="checkbox"
-                        className="h-4 w-4 rounded border-blue-800 text-blue-900 focus:ring-blue-500"
+                        className="h-4 w-4 sm:hidden rounded border-blue-800 text-blue-900 focus:ring-blue-500"
                       />
                       <label
                         htmlFor="remember-me"
-                        className="ml-2 block text-md text-blue-900 hover:text-blue-500"
+                        className="ml-2 sm:hidden block text-md text-blue-900 hover:text-blue-500"
                       >
                         Remember me
                       </label>
@@ -159,7 +159,7 @@ export default function SignIn() {
                     <div className="text-md">
                       <a
                         href="#"
-                        className="font-medium text-blue-900 hover:text-blue-500"
+                        className="font-medium sm:hidden text-blue-900 hover:text-blue-500"
                       >
                         Forgot your password?
                       </a>
@@ -169,7 +169,7 @@ export default function SignIn() {
                   <div>
                     <button
                       type="submit"
-                      className="flex w-full justify-center rounded-md border border-transparent bg-purple-400 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                      className="flex w-full sm:hidden justify-center rounded-md border border-transparent bg-purple-400 py-2 px-4 text-md font-medium text-white shadow-sm hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
                     >
                       Sign in
                     </button>
@@ -179,9 +179,9 @@ export default function SignIn() {
             </div>
           </div>
         </div>
-        <div className="lg:relative sm:absolute bg-base lg:flex-1 lg:block">
+        <div className="scroll-py-px max-h-90 md:h-96 object-fit sm:absolute bg-purple-50 shadow-md overflow-hidden">
           <img
-            className="sm:rounded-xl  md:w-1/2 md:h-1/2 md:absolute lg:w-full lg:h-full lg:absolute lg:rounded-xl lg:object-cover"
+            className="px-0.5 object-center sm:rounded-lg md:w-96 lg:w-full lg:h-full mb-0"
             src={signIn}
             alt=""
           />
