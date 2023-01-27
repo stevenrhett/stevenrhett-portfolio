@@ -1,4 +1,4 @@
-// @ts-ignore
+//
 import React, { Fragment, useState } from "react";
 import { Dialog, Menu, Transition } from "@headlessui/react";
 import {
@@ -15,7 +15,7 @@ import {
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 // import "./App.css";
 import Body from "./body";
-// @ts-ignore
+//
 import coderthinking from "./assets/coderthinking.svg";
 
 // const userNavigation = [
@@ -38,11 +38,11 @@ function classNames(...classes) {
 export default function Dashboard() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
-  // @ts-ignore
+  //
+  //
+  //
+  //
+  //
   return (
     <>
       <div className="flex h-full">

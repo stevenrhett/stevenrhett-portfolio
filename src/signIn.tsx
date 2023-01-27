@@ -1,23 +1,16 @@
-// @ts-ignore
 import React from "react";
-// @ts-ignore
 import signIn from "./assets/signIn.svg";
 export default function SignIn() {
   return (
     <>
       <div className="flex bg-gray-50 min-h-full">
-        <div className="flex mx-auto sm:scroll-py-14 md:py-12 py-16 object-contain px-4 sm:px-6 lg:flex-none lg:px-48 xl:px-24">
-          <div className="mx-auto sm:static sm:mt-32  max-w-md ">
-            <div>
-              <h2 className="sm:mt-52 mt-0 text-3xl text-center font-bold tracking-tight text-blue-900">
+        <div className="flex mx-auto sm:py-14 md:py-12 py-16 object-cover px-4 sm:px-6 lg:flex-none lg:px-48 xl:px-24">
+          <div className="mx-auto sm:static sm:mt-32 max-w-md ">
+            <div className="sm:mt-48 mb-0">
+              <h2 className="sm:mt-60 mb-0 mt-0 text-3xl text-center font-bold tracking-tight text-blue-900">
                 Sign in to register
               </h2>
-              <p className="mt-2 text-md text-blue-900">
-                <a
-                  href="#"
-                  className="font-medium text-purple-900 hover:text-purple-900"
-                ></a>
-              </p>
+              <p className="mt-2 text-md text-blue-900"></p>
             </div>
 
             <div className="mt-6">
@@ -26,7 +19,7 @@ export default function SignIn() {
                   <div className="mt-1 grid grid-cols-3 gap-3">
                     <div>
                       <a
-                        href="#"
+                        href="https://www.facebook.com"
                         className="inline-flex w-full justify-center rounded-md border border-blue-500 bg-white py-2 px-4 text-md font-medium text-blue-900 shadow-sm hover:bg-blue-50"
                       >
                         <span className="sr-only">Sign in with Google</span>
@@ -47,7 +40,7 @@ export default function SignIn() {
 
                     <div>
                       <a
-                        href="#"
+                        href="https://www.linkedin.com"
                         className="inline-flex w-full justify-center rounded-md border border-blue-500 bg-white py-2 px-4 text-md font-medium text-blue-900 shadow-sm hover:bg-blue-50"
                       >
                         <span className="sr-only">Sign in with LinkedIn</span>
@@ -64,7 +57,7 @@ export default function SignIn() {
 
                     <div>
                       <a
-                        href="#"
+                        href="https://www.github.com"
                         className="inline-flex w-full justify-center rounded-md border border-blue-500 bg-white py-2 px-4 text-md font-medium text-blue-900 shadow-sm hover:bg-blue-50"
                       >
                         <span className="sr-only">Sign in with GitHub</span>
@@ -179,9 +172,9 @@ export default function SignIn() {
             </div>
           </div>
         </div>
-        <div className="scroll-py-px max-h-90 md:h-96 object-fit sm:absolute bg-purple-50 shadow-md overflow-hidden">
+        <div className="rounded-lg py-2 px-2 bg-base-50 lg:pb-36 md:h-96 object-cover sm:absolute shadow-sm overflow-hidden">
           <img
-            className="px-0.5 object-center sm:rounded-lg md:w-96 lg:w-full lg:h-full mb-0"
+            className="rounded-lg bg-base-50 md:w-96 lg:w-full lg:h-full "
             src={signIn}
             alt=""
           />
