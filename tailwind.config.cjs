@@ -5,6 +5,6 @@ module.exports = {
             'md': {'min': '768px', 'max': '1023px'},
             'lg': {'min': '1024px', 'max': '1280px'},
         },
-    }, plugins: [require('@tailwindcss/forms'), require("daisyui")],
+    }, plugins: [require("daisyui"), require('@tailwindcss/forms')],
 
 }
