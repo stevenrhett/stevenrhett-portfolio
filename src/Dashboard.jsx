@@ -1,47 +1,69 @@
-import React, {Fragment, useState} from "react";
-import {NavLink} from "react-router-dom";
-import {Dialog, Transition} from "@headlessui/react";
+import {Fragment, useState} from 'react'
+import {Dialog, Transition} from '@headlessui/react'
+import Body from "./Body"
 import {
-    Bars3BottomLeftIcon, CogIcon, HomeIcon, PhotoIcon, RectangleStackIcon, Squares2X2Icon, UserGroupIcon, XMarkIcon,
-} from "@heroicons/react/24/outline";
-import {MagnifyingGlassIcon} from "@heroicons/react/20/solid";
-import Body from "./Body.jsx";
-import classes from "./Root.module.css";
+    Bars3BottomLeftIcon,
+    CogIcon,
+    HomeIcon,
+    PhotoIcon,
+    RectangleStackIcon,
+    Squares2X2Icon,
+    UserGroupIcon,
+    XMarkIcon,
+} from '@heroicons/react/24/outline'
+import {Link} from "react-router-dom";
 
-const sidebarNavigation = [{name: "Home", href: "/", icon: HomeIcon, current: true}, {
-    name: "My Work", href: "/projects", icon: Squares2X2Icon, current: false
-}, {name: "Photos", href: "/photos", icon: PhotoIcon, current: false}, {
-    name: "Shared", href: "/shared", icon: UserGroupIcon, current: false
-}, {name: "Albums", href: "/albums", icon: RectangleStackIcon, current: false}, {
-    name: "Settings", href: "/settings", icon: CogIcon, current: false
-},];
+const sidebarNavigation = [{name: 'Home', href: '#', icon: HomeIcon, current: false}, {
+    name: 'All Files',
+    href: '/',
+    icon: Squares2X2Icon,
+    current: false
+}, {name: 'Photos', href: '/photos', icon: PhotoIcon, current: true}, {
+    name: 'Shared',
+    href: '/photos',
+    icon: UserGroupIcon,
+    current: false
+}, {name: 'Albums', href: '/albums', icon: RectangleStackIcon, current: false}, {
+    name: 'Settings',
+    href: '/settings',
+    icon: CogIcon,
+    current: false
+},]
+const userNavigation = [{name: 'Your Profile', href: '/profile'}, {name: 'Sign out', href: '..'},]
 
 function classNames(...classes) {
-    return classes.filter(Boolean).join(" ");
+    return classes.filter(Boolean).join(' ')
 }
+
 
 export default function Dashboard() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 
     return (<>
-        <div className="flex min-h-fit">
+        <div className="flex h-full">
             {/* Narrow sidebar */}
-
-            <div className="hidden w-28 overflow-y-auto bg-purple-200 md:hidden md:block">
+            <div className="hidden w-28 overflow-y-auto bg-purple-200 ">
                 <div className="flex w-full flex-col items-center py-6">
+
+
                     <div className="mt-6 w-full flex-1 space-y-1 px-2">
-                        <NavLink
-                            to='/'
-                            className={({isActive}) => isActive ? classes.active : undefined}
-                            activeClassName={classes.active} end
-
-                        />
-
-
+                        {sidebarNavigation.map((item) => (<a
+                            key={item.name}
+                            href={item.href}
+                            className={classNames(item.current ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-800 hover:text-white', 'group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium')}
+                            aria-current={item.current ? 'page' : undefined}
+                        >
+                            <item.icon
+                                className={classNames(item.current ? 'text-white' : 'text-indigo-300 group-hover:text-white', 'h-6 w-6')}
+                                aria-hidden="true"
+                            />
+                            <span className="mt-2">{item.name}</span>
+                        </a>))}
                     </div>
                 </div>
             </div>
+
 
             {/* Mobile menu */}
 
@@ -134,45 +156,40 @@ export default function Dashboard() {
                     <div className="relative z-10 flex h-16 flex-shrink-0 hover:bg-white bg-purple-50 shadow-sm">
                         <button
                             type="button"
-                            className=" px-4 text-purple-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 md:hidden"
+                            className=" px-4 text-purple-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-purple-500 md:hidden lg:hidden xl:hidden"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open sidebar</span>
                             <Bars3BottomLeftIcon className="h-6 w-6" aria-hidden="true"/>
                         </button>
                         <div className="flex flex-1 justify-between px-4 sm:px-6">
-                            <div className="flex flex-1">
-                                <form
-                                    className="flex w-full bg-purple-200 md:ml-0"
-                                    action="#"
-                                    method="GET"
-                                >
-                                    <label htmlFor="search-field" className="sr-only">
-                                        Search all files
-                                    </label>
-                                    <div className="relative w-full text-purple-900 focus-within:text-purple-900">
-                                        <div
-                                            className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
-                                            <MagnifyingGlassIcon
-                                                className="h-5 w-5 flex-shrink-0"
-                                                aria-hidden="true"
-                                            />
-                                        </div>
-                                        <input
-                                            name="search-field"
-                                            id="search-field"
-                                            className="h-full bg-purple-50 w-full hover:bg-white border-transparent py-2 pl-8 pr-3 text-purple-900 placeholder-purple-500 focus:border-transparent focus:placeholder-purple-400 focus:outline-none focus:ring-0"
-                                            placeholder="Search"
-                                            type="search"
-                                        />
-                                    </div>
-                                </form>
+                            <div className="sm:hidden flex flex-cols-3 p-4 mx-auto">
+                                <ul className="space-evenly grid grid-cols-6 space-x-6 gap-4">
+                                    <li>
+                                        <Link to="/">Home</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/files">All Files</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/photos">Photos</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/shared">Shared</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/albums">Albums</Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/settings">Settings</Link>
+                                    </li>
+
+                                </ul>
                             </div>
-                            <div className="ml-2 flex  items-center space-x-4 sm:ml-6 sm:space-x-6">
+                            <div className="mr-0 inline-flex items-center">
 
                                 <progress
-                                    active={"true"}
-                                    className="progress progress-primary bg-base sm:w-14 md:w-28 lg:w-56"></progress>
+                                    className=" progress progress-primary bg-base sm:w-14 md:w-28 lg:w-56"></progress>
                             </div>
                         </div>
                     </div>

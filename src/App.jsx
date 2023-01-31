@@ -3,13 +3,18 @@ import SignIn from "./SignIn.jsx";
 import Projects from "./pages/Projects.jsx";
 import RootLayout from "./Root.jsx";
 import ErrorElement from "./ErrorElement.jsx";
+import ProjectDetails from "./pages/ProjectDetails.jsx";
 
 const routeDefinitions = createRoutesFromElements(
     <Route>
         <Route path="/" element={<RootLayout/>}/>,
-        <Route path="/projects" element={<Projects/>}/>,
+        children[
         <Route path="/signin" element={<SignIn/>}/>,
-        <Route path="*" element={<ErrorElement/>}/>
+        <Route path="projects" element={<Projects/>}/>,
+        <Route path="projects/:id" element={<ProjectDetails/>}/>,
+        <Route path="*" element={<ErrorElement/>}/>,
+        ]
+
     </Route>);
 const router = createBrowserRouter(routeDefinitions);
 
