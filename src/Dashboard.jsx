@@ -1,25 +1,25 @@
 import React, {Fragment, useState} from "react";
-import {Dialog, Menu, Transition} from "@headlessui/react";
+import {Dialog, Transition} from "@headlessui/react";
 import {
     Bars3BottomLeftIcon,
     CogIcon,
     HomeIcon,
     PhotoIcon,
-    PlusIcon,
     RectangleStackIcon,
     Squares2X2Icon,
     UserGroupIcon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
 import {MagnifyingGlassIcon} from "@heroicons/react/20/solid";
+import Body from "./Body.jsx";
 
 const sidebarNavigation = [
-    {name: "Home", href: "#", icon: HomeIcon, current: true},
-    {name: "My Work", href: "#", icon: Squares2X2Icon, current: false},
-    {name: "Photos", href: "#", icon: PhotoIcon, current: false},
-    {name: "Shared", href: "#", icon: UserGroupIcon, current: false},
-    {name: "Albums", href: "#", icon: RectangleStackIcon, current: false},
-    {name: "Settings", href: "#", icon: CogIcon, current: false},
+    {name: "Home", href: "/home", icon: HomeIcon, current: true},
+    {name: "My Work", href: "/projects", icon: Squares2X2Icon, current: false},
+    {name: "Photos", href: "/photos", icon: PhotoIcon, current: false},
+    {name: "Shared", href: "/shared", icon: UserGroupIcon, current: false},
+    {name: "Albums", href: "/albums", icon: RectangleStackIcon, current: false},
+    {name: "Settings", href: "/settings", icon: CogIcon, current: false},
 ];
 
 function classNames(...classes) {
@@ -204,59 +204,15 @@ export default function Dashboard() {
                                     </form>
                                 </div>
                                 <div className="ml-2 flex  items-center space-x-4 sm:ml-6 sm:space-x-6">
-                                    {/* Profile dropdown */}
-                                    {/*<Menu as="div" className="relative flex-shrink-0">*/}
-                                    {/*  <div>*/}
-                                    {/*    <Menu.Button className="flex rounded-full bg-white text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">*/}
-                                    {/*      <span className="sr-only">Open user menu</span>*/}
-                                    {/*      <img*/}
-                                    {/*        className="h-8 w-8 rounded-full"*/}
-                                    {/*        src="https://images.unsplash.com/photo-1517365830460-955ce3ccd263?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=256&h=256&q=80"*/}
-                                    {/*        alt=""*/}
-                                    {/*      />*/}
-                                    {/*    </Menu.Button>*/}
-                                    {/*  </div>*/}
-                                    {/*  <Transition*/}
-                                    {/*    as={Fragment}*/}
-                                    {/*    enter="transition ease-out duration-100"*/}
-                                    {/*    enterFrom="transform opacity-0 scale-95"*/}
-                                    {/*    enterTo="transform opacity-100 scale-100"*/}
-                                    {/*    leave="transition ease-in duration-75"*/}
-                                    {/*    leaveFrom="transform opacity-100 scale-100"*/}
-                                    {/*    leaveTo="transform opacity-0 scale-95"*/}
-                                    {/*  >*/}
-                                    {/*    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">*/}
-                                    {/*      {userNavigation.map((item) => (*/}
-                                    {/*        <Menu.Item key={item.name}>*/}
-                                    {/*          {({ active }) => (*/}
-                                    {/*            <a*/}
-                                    {/*              href={item.href}*/}
-                                    {/*              className={classNames(*/}
-                                    {/*                active ? "bg-gray-100" : "",*/}
-                                    {/*                "block px-4 py-2 text-sm text-gray-700"*/}
-                                    {/*              )}*/}
-                                    {/*            >*/}
-                                    {/*              {item.name}*/}
-                                    {/*            </a>*/}
-                                    {/*          )}*/}
-                                    {/*        </Menu.Item>*/}
-                                    {/*      ))}*/}
-                                    {/*    </Menu.Items>*/}
-                                    {/*  </Transition>*/}
-                                    {/*</Menu>*/}
-                                    <button
-                                        type="button"
-                                        className="flex items-center  justify-center rounded-full bg-purple-400 p-1 text-white hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
-                                    >
-                                        <PlusIcon className="h-6 w-6" aria-hidden="true"/>
-                                        <span className="sr-only">Add file</span>
-                                    </button>
+
+                                    <progress
+                                        className="progress progress-primary bg-base sm:w-14 md:w-28 lg:w-56"></progress>
                                 </div>
                             </div>
                         </div>
                     </header>
                     {/* Main content */}
-                    {/*<Body />*/}
+                    <Body/>
                     <div className="flex flex-1 items-stretch">
                         <main className="flex-1 overflow-y-auto">
                             {/* Your content */}

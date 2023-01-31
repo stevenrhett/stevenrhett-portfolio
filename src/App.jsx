@@ -1,16 +1,29 @@
-import "./index.css";
-import Footer from "./footer.jsx";
-import SignIn from "./signIn";
-import * as React from "react";
-import Dashboard from "./Dashboard.jsx";
+import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
+import LandingPage from "./LandingPage.jsx";
+import SignIn from "./SignIn.jsx";
+import Projects from "./pages/Projects.jsx";
+import RootLayout from "./Root.jsx";
 
-export default function App() {
+const routeDefinitions = createRoutesFromElements(
+    <Route>
+        <Route path="/" element={<RootLayout/>}/>,
+        children:[
+        <Route path="/landingpage" element={<LandingPage/>}/>
+        <Route path="/signin" element={<SignIn/>}/>,
+        <Route path="/projects" element={<Projects/>}/>,
 
-    return (<div className="App">
+        ]
+    </Route>
+);
+const router = createBrowserRouter(routeDefinitions);
 
+function App() {
 
-        <Dashboard/>
-        <SignIn/>
-        <Footer/>
-    </div>);
+    return (<RouterProvider router={router}/>)
 }
+
+export default App;
+
+
+
+
