@@ -1,18 +1,26 @@
+
+import React from 'react';
 import {Outlet} from "react-router-dom";
-import Dashboard from "./Dashboard.jsx";
-import Footer from "./Footer.jsx";
-import classes from "./Root.module.css";
+import MainNavigation from "./components/MainNavigation.jsx";
+import{useNavigation} from "react-router-dom";
+function Root() {
+    const navigation = useNavigation();
+    return (
+        <>
+            <MainNavigation/>
+            <main>
+                {navigation.state === 'loading' && <p>Loading...
+                    <progress className="progress w-56"></progress></p>
 
-function RootLayout() {
-    return (<>
-        <Dashboard/>
-        <Footer/>
-        <main className={classes.content}>
-            <Outlet/>
-        </main>
+                }
+                {navigation.state === 'error' && <p>Error!</p>}
 
+                <Outlet/>
+            </main>
 
-    </>);
+        </>
+    );
 }
 
-export default RootLayout;
+
+export default Root;

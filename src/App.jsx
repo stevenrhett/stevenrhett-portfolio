@@ -1,30 +1,46 @@
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
-import SignIn from "./SignIn.jsx";
-import Projects from "./pages/Projects.jsx";
-import RootLayout from "./Root.jsx";
+import EventDetail from "./pages/EventDetail.jsx";
+import EditEvent from "./pages/EditEvent.jsx";
+import CreateEvent from "./pages/CreateEvent.jsx";
+import Root from "./Root.jsx";
+import EventsRoot from "./pages/EventsRoot.jsx";
 import ErrorElement from "./ErrorElement.jsx";
-import ProjectDetails from "./pages/ProjectDetails.jsx";
+import "./components/MainNavigation.module.css";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import Dashboard from "./Dashboard.jsx";
+import Events, {loader as eventsloader} from "./pages/Events.jsx";
 
-const routeDefinitions = createRoutesFromElements(
-    <Route>
-        <Route path="/" element={<RootLayout/>}/>,
-        children[
-        <Route path="/signin" element={<SignIn/>}/>,
-        <Route path="projects" element={<Projects/>}/>,
-        <Route path="projects/:id" element={<ProjectDetails/>}/>,
-        <Route path="*" element={<ErrorElement/>}/>,
-        ]
+const router = createBrowserRouter([{
+    path: "/", element: <Root/>, children: [
 
-    </Route>);
-const router = createBrowserRouter(routeDefinitions);
+        {
+            index: true, element: <Dashboard/>
+        },
+
+        {
+            path: "events", element: <EventsRoot/>, children: [
+
+                {
+                    index: true, element: <Events/>, loader: eventsloader,
+                },
+
+                {
+                    path: "create", element: <CreateEvent/>
+                },
+
+                {
+                    path: ":id", element: <EventDetail/>
+                }, {
+                    path: ":id/edit", element: <EditEvent/>
+                }]
+        }, {
+            path: "*", element: <ErrorElement/>
+        }]
+
+
+},]);
+
 
 function App() {
-
     return (<RouterProvider router={router}/>)
 }
-
-export default App;
-
-
-
 
