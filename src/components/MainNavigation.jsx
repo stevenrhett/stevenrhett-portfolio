@@ -6,7 +6,7 @@ function MainNavigation() {
     <header className={classes.header}>
       <nav>
         <ul className={classes.list}>
-          <li>
+          <li className="mx-2 px-4">
             <NavLink to='/' className={({isActive}) => isActive ? classes.active : undefined} end >Home</NavLink>
           </li>
           <li>

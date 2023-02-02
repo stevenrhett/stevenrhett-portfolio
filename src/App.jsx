@@ -1,9 +1,9 @@
-import EventDetail from "./pages/EventDetail.jsx";
+import EventDetail, {loader as eventDetailsLoader} from "./pages/EventDetail.jsx";
 import EditEvent from "./pages/EditEvent.jsx";
 import CreateEvent from "./pages/CreateEvent.jsx";
 import Root from "./Root.jsx";
 import EventsRoot from "./pages/EventsRoot.jsx";
-import ErrorElement from "./ErrorElement.jsx";
+import Error from "./pages/Error.jsx";
 import "./components/MainNavigation.module.css";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Dashboard from "./Dashboard.jsx";
@@ -11,7 +11,7 @@ import Events, {loader as eventsloader} from "./pages/Events.jsx";
 
 
 const router = createBrowserRouter([{
-    path: "/", element: <Root/>, children: [
+    path: "/", element: <Root/>, errorElement: <Error/>, children: [
 
         {
             index: true, element: <Dashboard/>
@@ -29,13 +29,11 @@ const router = createBrowserRouter([{
                 },
 
                 {
-                    path: ":id", element: <EventDetail/>
+                    path: ":event-id", element: <EventDetail/>, loader: eventDetailsLoader,
                 }, {
                     path: ":id/edit", element: <EditEvent/>
                 }]
-        }, {
-            path: "*", element: <ErrorElement/>
-        }]
+        },]
 
 
 },]);
