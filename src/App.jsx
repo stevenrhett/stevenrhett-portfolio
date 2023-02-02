@@ -9,6 +9,7 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Dashboard from "./Dashboard.jsx";
 import Events, {loader as eventsloader} from "./pages/Events.jsx";
 
+
 const router = createBrowserRouter([{
     path: "/", element: <Root/>, children: [
 
@@ -40,7 +41,10 @@ const router = createBrowserRouter([{
 },]);
 
 
-function App() {
-    return (<RouterProvider router={router}/>)
+const App = () => {
+    return (
+        <RouterProvider router={router}/>)
 }
+
+
 export default App;
