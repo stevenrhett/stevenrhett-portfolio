@@ -5,7 +5,7 @@ import {
     Bars3BottomLeftIcon,
     CogIcon,
     HomeIcon,
-    PhotoIcon,
+    PhotoIcon, PlusIcon,
     RectangleStackIcon,
     Squares2X2Icon,
     UserGroupIcon,
@@ -75,7 +75,7 @@ export default function Dashboard() {
                                 key={item.name}
                                 href={item.href}
                                 className={classNames(item.current ? 'bg-indigo-800 text-white' : 'text-indigo-100 hover:bg-indigo-800 hover:text-white', 'group w-full p-3 rounded-md flex flex-col items-center text-xs font-medium')}
-                                aria-current={item.current ? 'page' : undefined} end
+                                aria-current={item.current ? 'page' : undefined}
 
                                 >
                                     <item.icon
