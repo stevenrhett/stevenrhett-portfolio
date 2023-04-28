@@ -68,7 +68,7 @@ export default function Dashboard() {
         <>
             <div className="flex h-full">
                 {/* Narrow sidebar */}
-                <div className="hidden w-28 overflow-y-auto bg-purple-200 md:hidden md:block">
+                <div className="hidden w-28 overflow-y-auto bg-purple-200">
                     <div className="flex w-full flex-col items-center py-6">
                         <div className="mt-6 w-full flex-1 space-y-1 px-2">
                             {sidebarNavigation.map((item) => (<a
@@ -230,8 +230,8 @@ export default function Dashboard() {
                                         <button
                                             type="button"
                                             className="px-4 text-purple-900 focus:outline-none focus:
-                                    ring-2 focus:ring-inset focus:ring-purple-500 md:
-                                    hidden lg:hidden xl:hidden"
+                                    ring-2 focus:ring-inset focus:ring-purple-500"
+
                                             onClick={() => setMobileMenuOpen(false)}
                                         >
                                             <span className="sr-only">Close sidebar</span>
