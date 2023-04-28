@@ -1,20 +1,14 @@
 import { Outlet } from "react-router-dom";
-import MainNavigation from "./components/MainNavigation.jsx";
-import { useNavigation } from "react-router-dom";
+import Navigation from "./Navigation.jsx";
 import Footer from "./Footer.jsx";
 
-function Root() {
-  const navigation = useNavigation();
+function RootLayout() {
   return (
     <>
-      <MainNavigation />
+      <nav className="nav">
+        <Navigation />
+      </nav>
       <main>
-        {navigation.state === "loading" && <p>Loading...
-          <progress className="progress w-56"></progress></p>
-
-        }
-        {navigation.state === "error" && <p>Error!</p>}
-
         <Outlet />
       </main>
       <Footer />
@@ -23,4 +17,4 @@ function Root() {
 }
 
 
-export default Root;
+export default RootLayout;
