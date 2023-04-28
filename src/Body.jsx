@@ -17,23 +17,23 @@ export default function Body() {
               </p>
             <p className="mt-6 text-lg leading-8 text-gray-800">
               I am currently working on a project called{" "}
-              <a
-                href="https://www.felontech.org"
+              <Link
+                to="https://www.felontech.org"
                 className="font-semiBold text-blue-800">
                 FelonTech
-              </a>{" "}
+              </Link>{" "}
               which is a social platform geared toward returning citizens
               wishing to learn or refresh on modern technology. It
               allows users to connect with and learn at a self-paced
               environment.
               <br />
               <br />I am also working on a project called{" "}
-              <a
-                href="https://www.pawsome-github-io.vercel.app"
+              <Link
+                to="https://www.pawsome-github-io.vercel.app"
                 className="font-semiBold text-blue-800"
               >
                 Pawsome
-              </a>{" "}
+              </Link>{" "}
                   <span>  🐾🐾 </span>
               which is a social platform geared toward pet owners and pet trainers</p>
 

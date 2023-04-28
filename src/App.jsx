@@ -1,3 +1,4 @@
+import "./Root.module.css"
 import RootLayout from "./Root.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";
@@ -5,7 +6,8 @@ import Body from "./Body.jsx";
 import Teams from "./Teams.jsx";
 import Calendar from "./Calendar.jsx";
 import Projects from "./Projects.jsx";
-
+import Contact from "./Contact.jsx";
+import Policy from "./Policy.jsx";
 
 
 const router = createBrowserRouter([
@@ -18,15 +20,11 @@ const router = createBrowserRouter([
       { path: "/teams", element: <Teams /> },
       { path: "/projects", element: <Projects /> },
       { path: "/calendar", element: <Calendar /> },
-      // { path: "*", element: <NotFound /> }
-
-
-
+      { path: "/contact", element: <Contact /> },
+      { path: "/policy", element: <Policy /> }
 
     ]
   }
-
-
 ]);
 
 const App = () => {
