@@ -1,4 +1,3 @@
-import "./Root.module.css"
 import RootLayout from "./Root.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import About from "./About.jsx";

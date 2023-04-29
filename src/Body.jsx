@@ -41,13 +41,15 @@ export default function Body() {
               <div className="flex-1 ">
 
 
-                <button className="btn btn-active btn-primary">
+
                   <Link
                     to="/projects"
+                    className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-400 hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+
                   >
                     Recent Projects
                   </Link>
-                </button>
+
               </div>
             </div>
           </div>
