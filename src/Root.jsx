@@ -7,11 +7,16 @@ function RootLayout() {
   return (
     <>
 
-      <Navigation />
+      <nav>
+        <Navigation />
+      </nav>
 
       <Outlet />
 
-      <Footer />
+      <footer>
+        <Footer />
+      </footer>
+
     </>
   );
 }
