@@ -2,8 +2,11 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import "./Root.module.css"
 import { Link } from "react-router-dom";
+
+
+
 const navigation = [
-  { name: "Dashboard", href: "/", current: false },
+  { name: "Home", href: "/", current: false },
   { name: "Team", href: "/teams", current: false },
   { name: "Projects", href: "/projects", current: false },
   { name: "Calendar", href: "/calendar", current: false }
@@ -18,9 +21,7 @@ function classNames(...classes) {
 export default function Navigation() {
   return (
     <>
-
-
-        <Disclosure as="nav" className="bg-blue-400">
+      <Disclosure as="nav" className="bg-blue-400">
           {({ open }) => (
             <>
               <div className="mx-auto max-w-3xl px-4 lg:px-6">
@@ -35,7 +36,7 @@ export default function Navigation() {
                             className={classNames(
                               item.current
                                 ? "bg-blue-400 text-white"
-                                : "text-gray-100 hover:bg-blue-500 hover:text-white",
+                                : "text-gray-100 hover:w-fit hover:bg-blue-500 hover:text-white",
                               "rounded-md px-3 py-2 text-sm font-medium"
                             )}
                             aria-current={item.current ? "page" : undefined}
@@ -68,7 +69,7 @@ export default function Navigation() {
                       key={item.name}
                       href={item.href}
                       className={classNames(
-                        item.current ? "bg-blue-400 text-white" : "text-gray-100 hover:bg-blue-600 hover:text-white",
+                        item.current ? "bg-blue-400 text-white" : "hover:w-fit text-gray-100 hover:bg-blue-600 hover:text-white",
                         "block rounded-md px-3 py-2 font-medium"
                       )}
                       aria-current={item.current ? "page" : undefined}

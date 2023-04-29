@@ -15,13 +15,13 @@ function classNames(...classes) {
 export default function Footer() {
   return (
 
-    <footer className="footer footer-center p-4 bg-blue-50 rounded">
+    <footer className="footer footer-center p-4 bg-blue-50 rounded text-center">
       <div className="grid grid-flow-col gap-4 no-style">
         {item.map((item) => (
           <NavLink
             key={item.name}
             to={item.href}
-            className={classNames(item.current ? "bg-blue-400 text-gray-900" : " hover:bg-blue-400", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
+            className={classNames(item.current ? "bg-blue-400 text-gray-900" : " hover:bg-blue-400 hover:w-fit", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
             aria-current={item.current ? "page" : undefined}
           >
             <Link to={item.href}>{item.name}</Link>
@@ -30,7 +30,7 @@ export default function Footer() {
       <div>
         <div className="grid grid-flow-col gap-4">
           <NavLink to="/about"
-                   className={classNames(item.current? "bg-blue-400 text": " hover:bg-blue-400", "group py-2 px-3 rounded")}
+                   className={classNames(item.current? "bg-blue-400 text": "hover:w-fit hover:bg-blue-400", "group py-2 px-3 rounded")}
                    aria-current={item.current ? "page" : undefined}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 
@@ -39,7 +39,7 @@ export default function Footer() {
             </svg>
           </NavLink>
           <a
-            className={classNames(item.current ? "bg-blue-400 text-gray-900" : "hover:bg-blue-400", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
+            className={classNames(item.current ? "bg-blue-400 text-gray-900" : "hover:w-fit hover:bg-blue-400", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
             aria-current={item.current ? "page" : undefined}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
               <path
@@ -47,7 +47,7 @@ export default function Footer() {
             </svg>
           </a>
           <a
-            className={classNames(item.current ? "bg-blue-400 text-gray-900" : "hover:bg-blue-400", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
+            className={classNames(item.current ? "bg-blue-400 text-gray-900" : "hover:w-fit hover:bg-blue-400", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
             aria-current={item.current ? "page" : undefined}>
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
             >
@@ -59,7 +59,7 @@ export default function Footer() {
       </div>
       <div>
         <a
-          className={classNames(item.current ? "bg-blue-400 text-gray-900" : "text-gray-900 hover:bg-blue-400 hover:text-gray-900", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
+          className={classNames(item.current ? "bg-blue-400 text-gray-900" : "hover:w-fit text-gray-900 hover:bg-blue-400 hover:text-gray-900", "group py-2 px-3 rounded-md flex items-center text-sm font-medium")}
           aria-current={item.current ? "page" : undefined}>
           <p>&copy; 2023 Steven Rhett<br /> All rights reserved
           </p>
