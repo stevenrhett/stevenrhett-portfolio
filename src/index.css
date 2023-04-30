@@ -8,3 +8,7 @@ html {
 body {
     height : 100%;
 }
+.temporaryBounce {
+    -webkit-animation-iteration-count: 10;
+    animation-iteration-count: 10;
+}
