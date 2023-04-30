@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default function Body() {
 
   return (<>
-    <main>
-      <div className="relative bg-white flex flex-col">
-        <div className="mx-auto max-w-3xl px-4 py-4 sm:px-6 lg:px-8">
+    <main className="bg-gradient-to-r from-blue-300 to-transparent">
+      <div className="flex flex-col ">
+        <div className="max-w-3xl px-4 py-4  lg:px-6">
           <h2 className="temporaryBounce text-3xl text-start animate-bounce ">
             Steven Rhett Studios
           </h2>

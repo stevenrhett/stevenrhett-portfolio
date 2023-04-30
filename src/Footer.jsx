@@ -15,7 +15,7 @@ function classNames(...classes) {
 export default function Footer() {
   return (
 <div className="bg-blue-400">
-  <footer className="footer footer-center p-4 rounded text-center">
+  <footer className="footer footer-center mb-0 text-center">
     <div className="grid grid-flow-col gap-4 no-style">
         {item.map((item) => (
           <Link
