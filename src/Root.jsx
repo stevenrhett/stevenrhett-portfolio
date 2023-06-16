@@ -1,24 +1,24 @@
-import { Outlet } from "react-router-dom";
+import {Outlet} from "react-router-dom";
 import Navigation from "./Navigation.jsx";
 import Footer from "./Footer.jsx";
 
 
 function RootLayout() {
-  return (
-    <>
+    return (<>
 
-      <nav>
-        <Navigation />
-      </nav>
+        <nav>
+            <Navigation/>
+        </nav>
+        <main>
+            <Outlet/>
+        </main>
 
-      <Outlet />
 
-      <footer>
-        <Footer />
-      </footer>
+        <footer>
+            <Footer/>
+        </footer>
 
-    </>
-  );
+    </>);
 }
 
 

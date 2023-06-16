@@ -15,7 +15,7 @@ const people = [
 export default function Teams() {
 
   return (
-    <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gradient-to-r from-blue-300 to-transparent px-4 py-4 shadow-sm sm:px-6">
+    <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gradient-to-r from-blue-300 to-transparent px-4 py-4 shadow-sm sm:px-6 min-h-screen">
       <main className="lg:pl-72">
         <div>
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
@@ -23,7 +23,7 @@ export default function Teams() {
               role="list">
               {people.map((person) => (
                 <li key={person.name}>
-                  <img className="w-fit min-h-fit justify-center object-cover" src={person.imageUrl} alt="" />
+                  <img className="w-fit justify-center object-cover" src={person.imageUrl} alt="" />
                   <div className="text-lg font-semibold leading-8 text-gray-900">{person.name}</div>
                   <div className="leading-7 max-w-2xl text-gray-800">{person.bio}</div>
 
