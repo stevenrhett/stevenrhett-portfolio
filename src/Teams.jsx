@@ -15,8 +15,8 @@ const people = [
 export default function Teams() {
 
   return (
-    <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gradient-to-r from-blue-300 to-transparent px-4 py-4 shadow-sm sm:px-6 min-h-screen">
-      <main className="lg:pl-72">
+    <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-gradient-to-r from-indigo-50 to-transparent px-4 py-4 shadow-sm sm:px-6 min-h-screen">
+      <main className="sm:pl-36 lg:pl-72">
         <div>
           <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">
             <ul

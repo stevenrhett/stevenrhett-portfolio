@@ -61,21 +61,16 @@ export default function Body() {
                 <main className="bg-gradient-to-r from-indigo-100 to-transparent">
                     <div className="">
                         <div className="">
-                            <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900"> Steven Rhett
-                                Studios</h2>
+                            <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900"></h2>
                             <p className="mt-4 text-lg leading-relaxed text-gray-500 sm:text-xl">
-                                <span className="text-indigo-600">Full Stack Developer</span>
+                                <span className="text-indigo-600"></span>
                                 <br/>
                             </p>
                             <div
-                                className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
-                                <div className="lg:pr-4">
+                                className="mb-10 lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                                <div className="p-4 ml-6 lg:pr-4">
                                     <div className="mt-8 space-y-8 text-gray-600">
                                         <p>
-                                            As a developer I am passionate about learning the latest software
-                                            innovations.
-                                            At present, I am personally invested in a project that I believe will
-                                            impact many people.
                                         </p>
                                         <p className="mt-8">
                                             I am currently working on a project called{" "}

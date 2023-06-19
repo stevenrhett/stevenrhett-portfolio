@@ -32,7 +32,7 @@ const products = [
 
 export default function Projects(){
   return (
-    <div className="bg-gradient-to-r from-blue-300 to-transparent">
+    <div className="bg-gradient-to-r from-indigo-50 to-transparent">
         <div className="mx-auto max-w-2xl px-6 py-10 lg:max-w-2xl">
           <div className="text-center text-2xl mb-6">Projects</div>
 
