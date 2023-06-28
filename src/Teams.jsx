@@ -24,6 +24,7 @@ export default function Teams() {
               {people.map((person) => (
                 <li key={person.name}>
                   <img className="w-fit justify-center object-cover" src={person.imageUrl} alt="" />
+
                   <div className="text-lg font-semibold leading-8 text-gray-900">{person.name}</div>
                   <div className="leading-7 max-w-2xl text-gray-800">{person.bio}</div>
 
