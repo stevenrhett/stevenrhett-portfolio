@@ -1,9 +1,14 @@
 import {Link} from "react-router-dom";
-import {CloudArrowUpIcon, LockClosedIcon, ServerIcon} from "@heroicons/react/20/solid/index.js";
+import {LockClosedIcon, ServerIcon} from "@heroicons/react/solid";
+
+
+
 
 export default function Body() {
 
     return (
+        <div className="mx-2.5 p-3 mb-10">
+
         <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
             <div className="absolute inset-0 -z-10 overflow-hidden">
                 <svg
@@ -94,55 +99,54 @@ export default function Body() {
                                             which is a social platform geared toward pet owners and pet trainers.
                                         </p>
                                     </div>
-                                    <button className="btn btn-wide bg-indigo-50 px-2 py-1 rounded">
+                                    <button className="btn-ghost bg-indigo-50 border-blue-500 px-2 py-1 rounded">
                                         <Link to="/projects">Recent Work</Link>
                                     </button>
-                                    <ul role="list" className="mt-8 space-y-8 text-gray-600">
-                                        <li className="flex gap-x-3">
-                                                        <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                                                                          aria-hidden="true"/>
-                                                        <span>
-                                <strong className="font-semibold text-gray-900">Push to deploy.</strong> Our Push to Deploy feature ensures hassle-free and seamless deployment of your website updates. With a simple command or
-                        button click, your changes are automatically pushed from your development environment to the live production server.
-                        This saves you time and eliminates the need for manual file transfers or complicated deployment processes.
-                              </span>
-                                                    </li>
-                                        <li className="flex gap-x-3">
-                                            <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                                                            aria-hidden="true"/>
-                                            <span>
-                                <strong className="font-semibold text-gray-900">SSL certificates.</strong> Security is paramount for any online business. Our SSL certificate service enables you to secure your website with
-                        HTTPS, providing a secure connection between your visitors' browsers and your website. This not only protects sensitive
-                        user data but also boosts customer trust and improves your website's search engine ranking. We take care of the entire
-                        SSL certificate installation and renewal process, ensuring your website remains secure at all times.
-                              </span>
-                                        </li>
-                                        <li className="flex gap-x-3">
-                                            <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                                                        aria-hidden="true"/>
-                                            <span>
-                                <strong className="font-semibold text-gray-900">Database backups.</strong> Data loss can be catastrophic for any business. Our automated database backup service ensures that your valuable website
-                        data is protected. We schedule regular backups of your website's database, securely storing them in multiple locations.
-                        In the event of accidental data deletion, server failures, or other emergencies, we can quickly restore your website to
-                        its latest backed-up state, minimizing any potential downtime and data loss.
-                              </span>
-                                        </li>
-                                        <li className="flex gap-x-3">
-                                            <div className="mt-1 h-5 w-5 flex-none text-indigo-600"
-                                                 aria-hidden="true"/>
-                                            <span>
-                    <strong className="font-semibold text-gray-900">Why Choose Website Management?</strong>  Streamlined deployment process with Push to Deploy functionality.
-                                        Enhanced security and customer trust with SSL certificates.
-                                        Peace of mind with automated and reliable database backups.
-                                        Dedicated support team available to assist you with any concerns.
-                                        Tailored packages to meet your specific website management needs.
-                                        Regular updates and improvements to ensure the highest level of service.
-                                        By utilizing our Website Management Plus service, you can focus on growing your business while we handle the technical
-                                    aspects of deploying updates, ensuring website security, and safeguarding your valuable data. Let us take care of these
-                                    critical tasks, allowing you to concentrate on what you do best.
-                  </span>
-                                        </li>
-                                    </ul>
+                                    {/*<ul role="list" className="mt-8 space-y-8 text-gray-600">*/}
+                                    {/*    <li className="flex gap-x-3">*/}
+
+                                                        {/*<span>*/}
+                  {/*              <strong className="font-semibold text-gray-900">Push to deploy.</strong> Our Push to Deploy feature ensures hassle-free and seamless deployment of your website updates. With a simple command or*/}
+                  {/*      button click, your changes are automatically pushed from your development environment to the live production server.*/}
+                  {/*      This saves you time and eliminates the need for manual file transfers or complicated deployment processes.*/}
+                  {/*            </span>*/}
+                  {/*                                  </li>*/}
+                  {/*                      <li className="flex gap-x-3">*/}
+                  {/*                          <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600"*/}
+                  {/*                                          aria-hidden="true"/>*/}
+                  {/*                          <span>*/}
+                  {/*              <strong className="font-semibold text-gray-900">SSL certificates.</strong> Security is paramount for any online business. Our SSL certificate service enables you to secure your website with*/}
+                  {/*      HTTPS, providing a secure connection between your visitors' browsers and your website. This not only protects sensitive*/}
+                  {/*      user data but also boosts customer trust and improves your website's search engine ranking. We take care of the entire*/}
+                  {/*      SSL certificate installation and renewal process, ensuring your website remains secure at all times.*/}
+                  {/*            </span>*/}
+                  {/*                      </li>*/}
+                  {/*                      <li className="flex gap-x-3">*/}
+                  {/*                          <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600"*/}
+                  {/*                                      aria-hidden="true"/>*/}
+                  {/*                          <span>*/}
+                  {/*              <strong className="font-semibold text-gray-900">Database backups.</strong> Data loss can be catastrophic for any business. Our automated database backup service ensures that your valuable website*/}
+                  {/*      data is protected. We schedule regular backups of your website's database, securely storing them in multiple locations.*/}
+                  {/*      In the event of accidental data deletion, server failures, or other emergencies, we can quickly restore your website to*/}
+                  {/*      its latest backed-up state, minimizing any potential downtime and data loss.*/}
+                  {/*            </span>*/}
+                  {/*                      </li>*/}
+                  {/*                      <li className="flex gap-x-3">*/}
+                  {/*                          <div className="mt-1 h-5 w-5 flex-none text-indigo-600"*/}
+                  {/*                               aria-hidden="true"/>*/}
+                  {/*                          <span>*/}
+                  {/*  <strong className="font-semibold text-gray-900">Why Choose Website Management?</strong>  Streamlined deployment process with Push to Deploy functionality.*/}
+                  {/*                      Enhanced security and customer trust with SSL certificates.*/}
+                  {/*                      Peace of mind with automated and reliable database backups.*/}
+                  {/*                      Dedicated support team available to assist you with any concerns.*/}
+                  {/*                      Tailored packages to meet your specific website management needs.*/}
+                  {/*                      Regular updates and improvements to ensure the highest level of service.*/}
+                  {/*                      By utilizing our Website Management Plus service, you can focus on growing your business while we handle the technical*/}
+                  {/*                  aspects of deploying updates, ensuring website security, and safeguarding your valuable data. Let us take care of these*/}
+                  {/*                  critical tasks, allowing you to concentrate on what you do best.*/}
+                  {/*</span>*/}
+                  {/*                      </li>*/}
+                  {/*                  </ul>*/}
 
                                 </div>
                             </div>
@@ -150,6 +154,7 @@ export default function Body() {
                     </div>
                 </main>
             </div>
+        </div>
         </div>
     )
 }

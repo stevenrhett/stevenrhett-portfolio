@@ -1,13 +1,13 @@
-import { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {ChevronLeftIcon, MenuIcon} from "@heroicons/react/solid";
 
 
 const navigation = [
     { name: "Home", href: "/" },
-    { name: "Team", href: "/teams" },
+    // { name: "Team", href: "/teams" },
     { name: "Projects", href: "/projects" },
-    { name: "Policy", href: "/policy" },
+    // { name: "Policy", href: "/policy" },
     { name: "Calendar", href: "/calendar" }
 ];
 
@@ -59,7 +59,7 @@ export default function Navigation() {
                                         <div className="absolute left-full top-0 flex w-16 justify-center pt-5 ">
                                             <button type="button" className="-m-2.5 p-2.5" onClick={() => setSidebarOpen(false)}>
                                                 <span className="sr-only">Close sidebar</span>
-                                                <XMarkIcon className="h-6 w-6 text-white" aria-hidden="true" />
+                                                <ChevronLeftIcon className="w-6 h-6 text-white" aria-hidden="true" />
                                             </button>
                                         </div>
                                     </Transition.Child>
@@ -105,19 +105,17 @@ export default function Navigation() {
                     </Dialog>
                 </Transition.Root>
 
-                <div className="sticky top-0 z-40 flex items-center gap-x-6 bg-white px-4 py-4 shadow-sm sm:px-6">
+                <div className="sticky top-0 left-0 z-40 flex items-center gap-x-6 bg-white py-4 shadow px-6">
                     <button type="button" className="-m-2.5 p-2.5 text-gray-700" onClick={() => setSidebarOpen(true)}>
                         <span className="sr-only">Open sidebar</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                        <MenuIcon className="lg:hidden h-6 w-6" aria-hidden="true" />
                     </button>
 
                 </div>
 
 
 
-                <aside className="fixed inset-y-0 left-72 hidden w-96 overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
-                    {/* Secondary column (hidden on smaller screens) */}
-                </aside>
+
             </div>
         </>
     )

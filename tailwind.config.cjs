@@ -1,19 +1,17 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
 
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
-  theme: {
-    extends: {},
-    screens: {
-      "sm": { "min": "370px", "max": "767px" },
-      "md": { "min": "768px", "max": "1023px" },
-      "lg": { "min": "1024px", "max": "1600px" }
-    },
-    plugins:
-      [
+module.exports = {
+    content: [
+        "./src/**/*.{js,ts,jsx,tsx}",
+
+    ],
+    theme: {},
+
+    plugins: [require("@headlessui/tailwindcss"),
         require("@tailwindcss/forms"),
         require("@tailwindcss/typography"),
-        require("daisyui")
-      ],
-  }
+        require("daisyui"),
+        require('@tailwindcss/aspect-ratio'),
+    ],
 
 };
