@@ -5,16 +5,14 @@ import {ChevronLeftIcon, MenuIcon} from "@heroicons/react/solid";
 
 const navigation = [
     { name: "Home", href: "/" },
-    // { name: "Team", href: "/teams" },
     { name: "Projects", href: "/projects" },
-    // { name: "Policy", href: "/policy" },
     { name: "Calendar", href: "/calendar" }
 ];
 
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-}
+// function classNames(...classes) {
+//     return classes.filter(Boolean).join(' ')
+// }
 
 export default function Navigation() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
@@ -63,42 +61,21 @@ export default function Navigation() {
                                             </button>
                                         </div>
                                     </Transition.Child>
-                                    {/* Sidebar component, swap this element with another sidebar if you like */}
-                                    <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-white px-6 pb-2">
-                                        <div className="flex h-16 shrink-0 items-center">
-                                          
+                                    <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl">
+                                        <div className="px-4 py-5 flex items-center justify-between border-b border-gray-200 sm:px-6">
+                                            <h6 className="text-xl font-bold text-gray-900">stevenrhett</h6>
                                         </div>
-                                        <nav className="flex flex-1 flex-col">
-                                            <ul role="list" className="flex flex-1 flex-col gap-y-7">
-                                                <li>
-                                                    <ul role="list" className="-mx-2 space-y-1">
-                                                        {navigation.map((item) => (
-                                                            <li key={item.name}>
-                                                                <a
-                                                                    href={item.href}
-                                                                    className={classNames(
-                                                                        item.current
-                                                                            ? 'bg-gray-50 text-indigo-600'
-                                                                            : 'text-gray-700 hover:text-indigo-600 hover:bg-gray-50',
-                                                                        'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-                                                                    )}
-                                                                >
-                                                                    <item
-                                                                        className={classNames(
-                                                                            item.current ? 'text-indigo-600' : 'text-gray-400 group-hover:text-indigo-600',
-                                                                            'h-6 w-6 shrink-0'
-                                                                        )}
-                                                                        aria-hidden="true"
-                                                                    />
-                                                                    {item.name}
-                                                                </a>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </nav>
+                                        <div className="flex-auto px-6 py-10 pt-0">
+                                            <nav className="flex flex-col">
+                                                {navigation.map((item) => (
+                                                    <a key={item.name} href={item.href} className=" p-3 block rounded-md text-base font-medium text-gray-900 hover:text-gray-700 hover:bg-gray-100">
+                                                        {item.name}
+                                                    </a>
+                                                ))}
+                                            </nav>
+                                        </div>
                                     </div>
+
                                 </Dialog.Panel>
                             </Transition.Child>
                         </div>
@@ -112,10 +89,6 @@ export default function Navigation() {
                     </button>
 
                 </div>
-
-
-
-
             </div>
         </>
     )

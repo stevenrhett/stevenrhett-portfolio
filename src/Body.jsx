@@ -64,8 +64,18 @@ export default function Body() {
                     />
                 </div>
                 <main className="bg-gradient-to-r from-indigo-100 to-transparent">
-                    <div className="">
-                        <div className="">
+
+                    <div>
+                                                    <h2 className="text-3xl font-bold leading-8 tracking-tight text-gray-900 sm:text-4xl">Skills</h2>
+                            <p className="mt-6 text-xl leading-8 text-gray-700">
+                                I have a wide range of skills that I am capable of.
+                            </p>
+                        </div>
+                    <div className="mt-12">
+                        <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+
+
+                        <div>
                             <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900"></h2>
                             <p className="mt-4 text-lg leading-relaxed text-gray-500 sm:text-xl">
                                 <span className="text-indigo-600"></span>
@@ -150,7 +160,9 @@ export default function Body() {
 
                                 </div>
                             </div>
-                        </div>
+
+                    </div>
+                        </dl>
                     </div>
                 </main>
             </div>
