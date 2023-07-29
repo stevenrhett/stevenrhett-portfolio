@@ -1,4 +1,4 @@
-import {ChevronLeftIcon, ChevronRightIcon} from "@heroicons/react/solid";
+import {ChevronLeftIcon, ChevronRightIcon} from "@heroicons/react/20/solid";
 
 const months = [
   {

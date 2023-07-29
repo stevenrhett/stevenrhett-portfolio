@@ -1,31 +1,29 @@
 import RootLayout from "./Root.jsx";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import Body from "./Body.jsx";
 import Teams from "./Teams.jsx";
 import Calendar from "./Calendar.jsx";
 import Projects from "./Projects.jsx";
 import Contact from "./Contact.jsx";
-import Policy from "./Policy.jsx";
 
 
 const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [
-      { path: "/", element: <Body /> },
-      { path: "/teams", element: <Teams /> },
-      { path: "/projects", element: <Projects /> },
-      { path: "/calendar", element: <Calendar /> },
-      { path: "/contact", element: <Contact /> },
-      { path: "/policy", element: <Policy /> }
+    {
+        path: "/",
+        element: <RootLayout/>,
+        children: [
+            {path: "/", element: <Body/>},
+            {path: "/teams", element: <Teams/>},
+            {path: "/projects", element: <Projects/>},
+            {path: "/calendar", element: <Calendar/>},
+            {path: "/contact", element: <Contact/>}
 
-    ]
-  }
+        ]
+    }
 ]);
 
 const App = () => {
-  return (<RouterProvider router={router} />);
+    return (<RouterProvider router={router}/>);
 };
 
 

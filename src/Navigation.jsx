@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import {XMarkIcon, MegaphoneIcon} from "@heroicons/react/24/outline";
+import {Dialog, Menu} from '@headlessui/react'
+import {XMarkIcon} from "@heroicons/react/24/outline";
 
 
 const navigation = [
@@ -9,10 +9,10 @@ const navigation = [
     { name: "Calendar", href: "/calendar" }
 ];
     export default function Navigation() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(true)
 
     return (
-        <header className="bg-white">
+        <header className="bg-base">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
@@ -28,7 +28,7 @@ const navigation = [
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <MegaphoneIcon className="h-6 w-6" aria-hidden="true"/>
+                        <Menu className="h-6 w-6" aria-hidden="true"/>
 
 
                     </button>
