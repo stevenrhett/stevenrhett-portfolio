@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Dialog } from '@headlessui/react'
-import {MenuIcon} from "@heroicons/react/solid";
+import {XMarkIcon, MegaphoneIcon} from "@heroicons/react/24/outline";
 
 
 const navigation = [
@@ -28,7 +28,9 @@ const navigation = [
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                        <MegaphoneIcon className="h-6 w-6" aria-hidden="true"/>
+
+
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
