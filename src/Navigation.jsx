@@ -32,8 +32,9 @@ export default function Navigation() {
                             leaveTo="opacity-0"
                         >
                             <div className="fixed inset-0 bg-gray-900/80" />
-                        </Transition.Child>
 
+
+                        </Transition.Child>
                         <div className="fixed inset-0 flex">
                             <Transition.Child
                                 as={Fragment}
@@ -64,6 +65,7 @@ export default function Navigation() {
                                     <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl">
                                         <div className="px-4 py-5 flex items-center justify-between border-b border-gray-200 sm:px-6">
                                             <h6 className="text-xl font-bold text-gray-900">stevenrhett</h6>
+
                                         </div>
                                         <div className="flex-auto px-6 py-10 pt-0">
                                             <nav className="flex flex-col">
@@ -88,7 +90,15 @@ export default function Navigation() {
                         <MenuIcon className="lg:hidden h-6 w-6" aria-hidden="true" />
                     </button>
 
+                    <a href="/">
+                        <img className="h-10 w-auto" src="https://avatars.githubusercontent.com/u/10999999?v=4" alt="avatar" />
+                    </a>
+
+
+
                 </div>
+
+
             </div>
         </>
     )
