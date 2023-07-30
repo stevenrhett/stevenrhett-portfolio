@@ -33,13 +33,13 @@ export default function Teams() {
                     <li>
                       <Link to={person.githubUrl} className="text-gray-700 hover:text-gray-900">
                         <span className="sr-only">GitHub</span>
-                        <img className="h-5 w-5" src="#" alt="#" />
+                        <img className="h-5 w-5" src="" alt="" />
                       </Link>
                     </li>
                     <li>
                       <Link to={person.linkedinUrl} className="text-gray-700 hover:text-gray-900">
                         <span className="sr-only">LinkedIn</span>
-                        <img className="h-5 w-5" src="#" alt="#" />
+                        <img className="h-5 w-5" src="" alt="" />
                       </Link>
                     </li>
                   </ul>
