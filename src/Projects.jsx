@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: 'Pawsome ',
-        imageSrc: './assets/Screenshot 2023-04-29 at 7.57.08 PM.png',
+        imageSrc: '',
         href: 'https://pawsome-github-io.vercel.app/',
 
     },
@@ -10,21 +10,21 @@ const products = [
         id: 2,
         name: 'Woodchuck Stump Grinding',
         href: 'https://woodchuck-app.vercel.app/',
-        imageSrc: './src/assets/wood.png',
+        imageSrc: './src/assets/woodchuck.png',
 
     },
     {
         id: 3,
         name: 'Task Tracker',
         href: 'https://task-tracker-omega.vercel.app/',
-        imageSrc: './src/assets/Screenshot 2023-04-29 at 7.57.31 PM.png',
+        imageSrc: './src/assets/ultratask.png',
 
     },
     {
         id: 4,
         name: 'Real Estate',
         href: 'https://rainmaker82.wpcomstaging.com',
-        imageSrc: './src/assets/Screenshot 2023-07-21 at 7.50.48 AM.jpg',
+        imageSrc: './src/assets/rainmakers.jpg',
 
     },
 
