@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: 'Pawsome ',
-        imageSrc: './src/assets/Screenshot 2023-04-29 at 7.57.08 PM.png',
+        imageSrc: './assets/Screenshot 2023-04-29 at 7.57.08 PM.png',
         href: 'https://pawsome-github-io.vercel.app/',
 
     },

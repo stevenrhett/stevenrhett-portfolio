@@ -18,7 +18,7 @@ const navigation = [
                 <div className="flex lg:flex-1">
                     <Link to={"/"} className="-m-1.5 p-1.5">
                         <span className="sr-only">Steven Rhett Studios</span>
-                        <img className="hidden lg:flex lg:h-48 w-auto" src="/src/assets/Ste_Rhe.svg"
+                        <img className="hidden lg:flex lg:h-48 w-auto" src="/assets/Ste_Rhe.svg"
                              alt=""/>
                     </Link>
                 </div>
@@ -53,7 +53,7 @@ const navigation = [
                             <span className="sr-only">Steven Rhett Studio</span>
                             <img
                                 className="h-8 w-auto"
-                                src="/src/assets/Ste_Rhe.svg"
+                                src="/assets/Ste_Rhe.svg"
                                 alt=""
                             />
                         </Link>
