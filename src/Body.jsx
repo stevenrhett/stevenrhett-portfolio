@@ -40,7 +40,7 @@ export default function Body() {
                                 <Link to={"/"} className="inline-flex space-x-6">
                                     <span className="sr-only">Steven Rhett Studio</span>
                                     <img
-                                        className="lg:hidden h-48 w-auto"
+                                        className="lg:hidden flex h-48 w-auto"
                                         src="src/Ste_Rhe.svg"
                                         alt=""
                                     />
