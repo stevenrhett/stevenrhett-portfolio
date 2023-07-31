@@ -1,5 +1,4 @@
 import {Link} from "react-router-dom";
-import React from "react";
 
 export default function Body() {
     return (
@@ -8,7 +7,7 @@ export default function Body() {
                 {/* Hero section */}
                 <div className="relative isolate overflow-hidden">
                     <svg
-                        className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+                        className="absolute inset-0 -z-10 h-full w-full stroke-white/10 [mask-image:radial-gradient(100%_100%_at_top_right,gray,transparent)]"
                         aria-hidden="true">
                         <defs>
                             <pattern id="983e3e4c-de6d-4c3f-8d64-b9761d1534cc" width={200} height={200} x="50%" y={-1}
@@ -28,7 +27,7 @@ export default function Body() {
                         className="absolute left-[calc(50%-4rem)] top-10 -z-10 transform-gpu blur-3xl sm:left-[calc(50%-18rem)] lg:left-48 lg:top-[calc(50%-30rem)] xl:left-[calc(50%-24rem)]"
                         aria-hidden="true">
                         <div
-                            className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-20"
+                            className="aspect-[1108/632] w-[69.25rem] bg-gradient-to-r from-[#0061FF] to-[#60EFFF] opacity-20"
                             style={{
                                 clipPath: 'polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)'
                                 ,
@@ -45,10 +44,9 @@ export default function Body() {
                                         alt=""
                                     />
                                 </Link>
-
                                 <div className="lg:pr-4">
                                     <div className="lg:max-w-lg">
-                                        <span className="font-semibold leading-7 text-indigo-600">Full Stack
+                                        <span className="font-bold leading-7 brightness-100 text-indigo-600">Full Stack
                                             Developer</span>
                                         <h1 className="mt-2 mb-6 text-3xl font-bold tracking-tight">
                                             Steven
@@ -63,13 +61,13 @@ export default function Body() {
                                     </div>
                                 </div>
                             </div>
-                            <h1 className="mt-10 mb-6 text-4xl font-bold tracking-tight">
+                            <h1 className="mt-10 mb-6 text-3xl font-bold tracking-tight">
                                 Recent Projects
                             </h1>
                             <span className="mt-6 text-xl leading-8">
                                 I am currently working on a project called{" "}
                                 <a href="https://www.felontech.org" target="_blank" rel="noopener noreferrer"
-                                   className="text-indigo-600 hover:text-indigo-500">
+                                   className="text-indigo-600 hover:underline hover:text-indigo-500">
                                     FelonTech{" "}
                                     <span className="sr-only">felontech.org</span>
                                 <span className="sr-only"> (opens in a new tab)</span>
@@ -84,7 +82,7 @@ export default function Body() {
                             I am also working on a project called{" "}
                                 <a href="https://www.pawsome-github-io.vercel.app" target="_blank"
                                    rel="noopener noreferrer"
-                                   className="font-semiBold text-indigo-800">
+                                   className="font-semiBold text-indigo-600 hover:underline hover:text-indigo-500">
                                 Pawsome
                             </a>
                                 <span> 🐾🐾 </span>

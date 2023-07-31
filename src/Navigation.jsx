@@ -11,8 +11,9 @@ const navigation = [
 ];
     export default function Navigation() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const activeLink = "font-bold"
 
-    return (
+        return (
         <header className="bg-gray-100">
             <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
@@ -34,8 +35,9 @@ const navigation = [
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <NavLink to={item.href} key={item.name} href={item.href}
-                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">
+                        <NavLink to={item.href} key={item.name}
+                                 className={({ isActive }) => (isActive ? activeLink : "")}
+>
                             {item.name}
                         </NavLink>
                     ))}
@@ -47,12 +49,12 @@ const navigation = [
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full  overflow-y-auto bg-gray-100 px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <Link to={"/"} className="-m-1.5 p-1.5">
                             <span className="sr-only">Steven Rhett Studio</span>
                             <img
-                                className="h-8 w-auto"
+                                className="h-28 w-auto"
                                 src="/src/Ste_Rhe.svg"
                                 alt=""
                             />
@@ -64,8 +66,6 @@ const navigation = [
                         >
                             <span className="sr-only">Close menu</span>
                             <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-
-
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
@@ -74,16 +74,17 @@ const navigation = [
                                 {navigation.map((item) => (
                                     <NavLink to={item.href}
                                         key={item.name}
-                                        href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                             className="-mx-3 block rounded-lg px-3 py-2 font-semibold leading-7 hover:bg-gray-50"
+
+
                                     >
                                         {item.name}
                                     </NavLink>
                                 ))}
                             </div>
-                            {/*<div className="py-6">*/}
+                            <div className="py-6">
 
-                            {/*</div>*/}
+                            </div>
                         </div>
                     </div>
                 </Dialog.Panel>
