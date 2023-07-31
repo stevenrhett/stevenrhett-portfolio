@@ -41,7 +41,8 @@ export default function Body() {
                                     <span className="sr-only">Steven Rhett Studio</span>
                                     <img
                                         className="lg:hidden h-48 w-auto"
-                                        src="/src/assets/Ste_Rhe.svg"                                        alt=""
+                                        src="/src/assets/Ste_Rhe.svg"
+                                        alt=""
                                     />
 
                                 </Link>

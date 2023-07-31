@@ -7,10 +7,10 @@ import {Bars4Icon} from "@heroicons/react/20/solid";
 const navigation = [
     { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
-    { name: "Calendar", href: "/calendar" }
+    { name: "Calendar", href: "/calendar" },
 ];
     export default function Navigation() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(true)
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
         <header className="bg-base">
