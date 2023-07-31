@@ -4,7 +4,6 @@ import Body from "./Body.jsx";
 import Teams from "./Teams.jsx";
 import Calendar from "./Calendar.jsx";
 import Projects from "./Projects.jsx";
-import Contact from "./Contact.jsx";
 
 
 const router = createBrowserRouter([
@@ -16,7 +15,6 @@ const router = createBrowserRouter([
             {path: "/teams", element: <Teams/>},
             {path: "/projects", element: <Projects/>},
             {path: "/calendar", element: <Calendar/>},
-            {path: "/contact", element: <Contact/>}
 
         ]
     }

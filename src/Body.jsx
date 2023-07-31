@@ -41,10 +41,9 @@ export default function Body() {
                                     <span className="sr-only">Steven Rhett Studio</span>
                                     <img
                                         className="lg:hidden h-48 w-auto"
-                                        src="/assets/Ste_Rhe.svg"
+                                        src="src/Ste_Rhe.svg"
                                         alt=""
                                     />
-
                                 </Link>
 
                                 <div className="lg:pr-4">
@@ -71,11 +70,8 @@ export default function Body() {
                                 I am currently working on a project called{" "}
                                 <a href="https://www.felontech.org" target="_blank" rel="noopener noreferrer"
                                    className="text-indigo-600 hover:text-indigo-500">
-    FelonTech{" "}
-
-
-
-                                <span className="sr-only">felontech.org</span>
+                                    FelonTech{" "}
+                                    <span className="sr-only">felontech.org</span>
                                 <span className="sr-only"> (opens in a new tab)</span>
                                     </a>
                                 which is a social platform that allows students to create and connect with other returning citizens.
@@ -86,17 +82,14 @@ export default function Body() {
                             </span>
                             <span className="text-xl leading-8">
                             I am also working on a project called{" "}
-                            <a href="https://www.pawsome-github-io.vercel.app" target="_blank" rel="noopener noreferrer"
-                               className="font-semiBold text-indigo-800">
+                                <a href="https://www.pawsome-github-io.vercel.app" target="_blank"
+                                   rel="noopener noreferrer"
+                                   className="font-semiBold text-indigo-800">
                                 Pawsome
                             </a>
-
-
-                            <span> 🐾🐾 </span>
+                                <span> 🐾🐾 </span>
                             which is a social platform geared toward pet owners and pet
                                 trainers.</span>
-
-
                         </div>
                         <div
                             className="mx-auto mt-16 flex max-w-2xl sm:mt-24 lg:ml-10 lg:mr-0 lg:mt-0 lg:max-w-none lg:flex-none xl:ml-32">
