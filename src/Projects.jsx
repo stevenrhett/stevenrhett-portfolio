@@ -2,7 +2,7 @@ const products = [
     {
         id: 1,
         name: 'Pawsome ',
-        imageSrc: '',
+        imageSrc: 'assets/pawsome.png',
         href: 'https://pawsome-github-io.vercel.app/',
 
     },
@@ -10,21 +10,21 @@ const products = [
         id: 2,
         name: 'Woodchuck Stump Grinding',
         href: 'https://woodchuck-app.vercel.app/',
-        imageSrc: './src/assets/woodchuck.png',
+        imageSrc: 'assets/woodchuck.png',
 
     },
     {
         id: 3,
         name: 'Task Tracker',
         href: 'https://task-tracker-omega.vercel.app/',
-        imageSrc: './src/assets/ultratask.png',
+        imageSrc: '/assets/ultratask.png',
 
     },
     {
         id: 4,
         name: 'Real Estate',
         href: 'https://rainmaker82.wpcomstaging.com',
-        imageSrc: './src/assets/rainmakers.jpg',
+        imageSrc: 'assets/rainmakers.jpg',
 
     },
 
