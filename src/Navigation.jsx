@@ -3,6 +3,7 @@ import {Dialog} from '@headlessui/react'
 import {XMarkIcon} from "@heroicons/react/24/outline";
 import {Link, NavLink} from "react-router-dom";
 import {Bars4Icon} from "@heroicons/react/20/solid";
+import logo from "/assets/Ste_Rhe copy.svg";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -19,7 +20,7 @@ const navigation = [
                 <div className="flex lg:flex-1">
                     <Link to={"/"} className="-m-1.5 p-1.5">
                         <span className="sr-only">Steven Rhett Studios</span>
-                        <img className="hidden lg:flex lg:h-48 w-auto" src="/src/Ste_Rhe.svg"
+                        <img src={logo} className="hidden lg:flex lg:h-48 w-auto"
                              alt=""/>
                     </Link>
                 </div>
@@ -55,7 +56,7 @@ const navigation = [
                             <span className="sr-only">Steven Rhett Studio</span>
                             <img
                                 className="h-28 w-auto"
-                                src="/src/Ste_Rhe.svg"
+                                src={logo}
                                 alt=""
                             />
                         </Link>
