@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-
+import logo from "/assets/Ste_Rhe.svg"
 export default function Body() {
     return (
         <div className="bg-gray-100">
@@ -40,7 +40,7 @@ export default function Body() {
                                     <span className="sr-only">Steven Rhett Studio</span>
                                     <img
                                         className="lg:hidden flex h-48 w-auto"
-                                        src="src/Ste_Rhe.svg"
+                                        src={logo}
                                         alt=""
                                     />
                                 </Link>

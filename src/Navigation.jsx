@@ -3,7 +3,7 @@ import {Dialog} from '@headlessui/react'
 import {XMarkIcon} from "@heroicons/react/24/outline";
 import {Link, NavLink} from "react-router-dom";
 import {Bars4Icon} from "@heroicons/react/20/solid";
-import logo from "/assets/Ste_Rhe copy.svg";
+import logo from "/assets/Ste_Rhe.svg";
 
 const navigation = [
     { name: "Home", href: "/" },
