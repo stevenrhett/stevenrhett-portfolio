@@ -52,12 +52,10 @@ export default function Body() {
                                             Steven
                                             Rhett Studios
                                         </h1>
-                                        <span className="mt-6 text-xl leading-8 text-gray-700">As a developer I am
-                                            passionate about learning the latest software
-                                            innovations.
-                                            At present, I am personally invested in a project that I believe will
-                                            impact many people.
+                                        <span className="mt-6 text-xl leading-8 text-gray-700">  Hi, my name is Steve, and I'm deeply immersed in the world of development. Constantly fueled by my enthusiasm to explore the latest software breakthroughs, I find myself dedicated to a project that holds immense promise—poised to make a meaningful difference in the lives of many. This exciting endeavor perfectly aligns my passion with purpose, driving me forward as I work diligently to shape new horizons and contribute positively to our interconnected world.
                                         </span>
+
+
                                     </div>
                                 </div>
                             </div>

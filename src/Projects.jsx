@@ -1,30 +1,35 @@
+import {Link} from "react-router-dom";
+import pawsomeImage from "/assets/pawsome.png";
+import woodchuckImage from "/assets/woodchuck.png";
+import ultrataskImage from "/assets/ultratask.png";
+import rainmakersImage from "/assets/rainmakers.jpg";
+
+
 const products = [
     {
         id: 1,
         name: 'Pawsome ',
-        imageSrc: 'assets/pawsome.png',
+        imageSrc: pawsomeImage,
         href: 'https://pawsome-github-io.vercel.app/',
-
     },
     {
         id: 2,
         name: 'Woodchuck Stump Grinding',
         href: 'https://woodchuck-app.vercel.app/',
-        imageSrc: 'assets/woodchuck.png',
-
+        imageSrc: woodchuckImage,
     },
     {
         id: 3,
         name: 'Task Tracker',
         href: 'https://task-tracker-omega.vercel.app/',
-        imageSrc: '/assets/ultratask.png',
+        imageSrc: ultrataskImage,
 
     },
     {
         id: 4,
         name: 'Real Estate',
         href: 'https://rainmaker82.wpcomstaging.com',
-        imageSrc: 'assets/rainmakers.jpg',
+        imageSrc: rainmakersImage,
 
     },
 
@@ -49,10 +54,10 @@ export default function Projects() {
                             <div className="mt-4 flex justify-between">
                                 <div>
                                     <h3 className="text-md text-center text-gray-700">
-                                        <a href={product.href}>
+                                        <Link to={product.href}>
                                             <span aria-hidden="true" className="absolute inset-0"/>
                                             {product.name}
-                                        </a>
+                                        </Link>
                                     </h3>
                                 </div>
                             </div>
