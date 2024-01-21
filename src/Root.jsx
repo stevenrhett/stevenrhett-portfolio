@@ -1,8 +1,8 @@
-import login from './login.jsx';
+import Login from './Login.jsx';
 
 function Root() {
 	return (<>
-		<login/>
+		<Login/>
 
 
 		{/*<Navigation/>*/}

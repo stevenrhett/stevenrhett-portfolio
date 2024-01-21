@@ -4,7 +4,7 @@ import Teams from "./Teams.jsx";
 import Root from "./Root";
 import Projects from "./Projects";
 import Calendar from "./Calendar";
-import login from "./login";
+import login from "./Login";
 
 const router = createBrowserRouter([
 
