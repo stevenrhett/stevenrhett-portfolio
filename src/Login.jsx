@@ -1,4 +1,7 @@
-export default function login() {
+import React from 'react'
+
+
+export default function Login() {
 	return (
 		<>
 			<div className="flex min-h-full flex-1">
@@ -7,8 +10,8 @@ export default function login() {
 						<div>
 							<img
 								className="h-10 w-auto"
-								src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-								alt="Your Company"
+								src=""
+								alt=""
 							/>
 							<h2 className="mt-8 text-2xl font-bold leading-9 tracking-tight text-gray-900">
 								Sign in to your account
@@ -16,7 +19,7 @@ export default function login() {
 							<p className="mt-2 text-sm leading-6 text-gray-500">
 								Not a member?{' '}
 								<a href="#" className="font-semibold text-indigo-600 hover:text-indigo-500">
-									Start a 14 day free trial
+									Start a 14 day free trial membership
 								</a>
 							</p>
 						</div>

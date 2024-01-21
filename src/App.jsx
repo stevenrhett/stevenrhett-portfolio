@@ -1,27 +1,21 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import Body from "./Body.jsx";
-import Teams from "./Teams.jsx";
-import Root from "./Root";
-import Projects from "./Projects";
-import Calendar from "./Calendar";
-import login from "./Login";
+import {createBrowserRouter, RouterProvider} from 'react-router-dom';
+import RootLayout from './Root';
+import Login from './Login';
 
 const router = createBrowserRouter([
-
-    {
-        path: "/",
-        element: <login />,
-        children: [
-            {path: "/", element: <Body/>},
-            {path: "/teams", element: <Teams/>},
-            {path: "/projects", element: <Projects/>},
-            {path: "/calendar", element: <Calendar/>},
-
-        ]
-    }
+	{
+		path: '/',
+		element: <RootLayout/>
+	},
+	{
+		path: '/login',
+		element: <Login/>
+	}
 ]);
+
+
 const App = () => {
-    return (<RouterProvider router={router}/>);
+	return (<RouterProvider router={router}/>);
 };
 
 

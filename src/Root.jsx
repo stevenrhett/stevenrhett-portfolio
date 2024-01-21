@@ -1,20 +1,16 @@
-import Login from './Login.jsx';
+import Navigation from './Navigation';
+import {Outlet} from 'react-router-dom';
+import Footer from './Footer';
+import Login from './Login';
 
-function Root() {
-	return (<>
-		<Login/>
+export default function RootLayout() {
+	return (
+		<>
+			<Navigation/>
+			<Outlet/>
+			<Login />
 
-
-		{/*<Navigation/>*/}
-
-
-		{/*<Outlet/>*/}
-
-
-		{/*<Footer/>*/}
-
-	</>);
+			<Footer/>
+		</>);
 }
 
-
-export default Root;
